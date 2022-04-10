@@ -38,7 +38,8 @@ Dari data 10.000 data tersebut kita dapat mendapatkan mean untuk penyurvei berte
 Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
 ``` 
 # C
-Kesimpulannya yang di dapat dari hasil poin a dan b adalah peluang distribusi geomteri yang di dapat pada poin a akan mendekati dengan poin b
+Kesimpulannya yang di dapat dari hasil poin a dan b adalah peluang 
+distribusi geomteri yang di dapat pada poin a akan mendekati dengan poin b
 ```
 
 ### D.
@@ -184,7 +185,10 @@ Dalam peermasalhan ini kita akan melakukan simulasi dan membuat suatu histogram 
 dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
 ``` 
 # C
-pada poin a kita mendapatkan bahwa peluang untuk mendapatkan kelahiran 6 anak menggunakan peluang distribusi poison adalah sebesar 0.1281201. dan untuk poin b kita mendapatkan 0.1205479. dari situ dapat kita simpulkan bahwa mendapatkan peluang menggunakan dpois hasilnya akan mendekati dengan menggunakan percobaan yang didapatkan dari sebuah data acak sebanyak 365
+pada poin a kita mendapatkan bahwa peluang untuk mendapatkan kelahiran 6 anak 
+menggunakan peluang distribusi poison adalah sebesar 0.1281201. dan untuk poin b kita mendapatkan 0.1205479. 
+dari situ dapat kita simpulkan bahwa mendapatkan peluang menggunakan dpois hasilnya akan mendekati dengan 
+menggunakan percobaan yang didapatkan dari sebuah data acak sebanyak 365
 ```
 
 ### D.
@@ -193,7 +197,8 @@ Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Poisson
 # D
 Rataan (μ) = 4.5
 Varian (σ²) = 4.5
-Dikarenakan pada distribusi poisson lamda yang diberitahukan pada soal sama dengan rataan dan juga varian. maka rataa = 4.5 dan varian = 4.5
+Dikarenakan pada distribusi poisson lamda yang diberitahukan pada soal 
+sama dengan rataan dan juga varian. maka rataa = 4.5 dan varian = 4.5
 ```
 ***
 ## **Soal 4**
@@ -344,12 +349,19 @@ Untuk mendapatkan varian dari distribusi normal rumusnya adalah sd (yang diberik
 
 ### Referensi
 https://www.statology.org/dgeom-pgeom-qgeom-rgeom-r/ = distribusi geometrik
+
 https://www.statology.org/dnorm-pnorm-rnorm-qnorm-in-r/ =  distribusi normal
+
 https://www.statology.org/dpois-ppois-qpois-rpois-r/ =  distribusi poisson
+
 https://www.statology.org/dbinom-pbinom-qbinom-rbinom-in-r/ =  distribusi binomial
+
 https://www.statology.org/chi-square-distribution-in-r-dchisq-pchisq-qchisq-rchisq/ = distribusi Chi-Square
+
 https://www.statology.org/plot-exponential-distribution-in-r/ =  distribusi exponensial
+
 https://bookdown.org/gabriel_butler/ECON41Labs/tutorial-5-the-poisson-distribution.html#predicting-the-number-of-babies-born-in-a-hospital
+
 https://rpubs.com/mpfoley73/458721
 
 
