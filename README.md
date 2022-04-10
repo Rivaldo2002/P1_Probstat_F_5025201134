@@ -317,6 +317,10 @@ X2 = 6
 # A
 rnorm(100, mean = 50, sd = 8)
 data.normal <- rnorm(100, mean = 50, sd = 8)
+mean.dnormal <- mean(data.normal)
+X1 <- floor(mean.dnormal)
+X2 <- ceiling(mean.dnormal)
+
 plot (data.normal)
 ```
 Berikut adalah data acak dari sebuah distribusi normal dan juga plot dari data acak tersebut
@@ -338,6 +342,8 @@ Berikut adalah histogram dari  generate random nilai sebanyak 100 data, mean = 5
 
 Selanjutnya untuk membuat histogram dari data acak sebelumnya kita akan menggunakan hist(data.normal, breaks = 50, main="5025201134_Rivaldo Panangian Tambunan_F_DNhistogram") dari siru kita akan mendapatkan histogram yang sesuai dengan data acak sebelumnya
 
+
+### C.
 ``` 
 # C
 varian.normal = 8*8
