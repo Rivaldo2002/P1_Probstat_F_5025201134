@@ -200,6 +200,8 @@ Varian (σ²) = 4.5
 Dikarenakan pada distribusi poisson lamda yang diberitahukan pada soal 
 sama dengan rataan dan juga varian. maka rataa = 4.5 dan varian = 4.5
 ```
+![Picture24](https://user-images.githubusercontent.com/71111983/162623897-737ab29b-31db-45e6-844f-696690e016a4.png)
+
 ***
 ## **Soal 4**
 Diketahui data dari  sebuah tempat bersalin di rumah sakit tertentu menunjukkan rata-rata historis 4,5 bayi lahir di rumah sakit ini setiap hari. (gunakan Distribusi Poisson)
