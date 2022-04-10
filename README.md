@@ -288,3 +288,34 @@ Berikut adalah data acak dari sebuah distribusi normal dan juga plot dari data a
 ![Picture20](https://user-images.githubusercontent.com/71111983/162620410-2fe084e7-2996-4f0a-84f9-a83d529918cf.png)
 
 ![Picture21](https://user-images.githubusercontent.com/71111983/162620413-97e0e6a1-81e7-408d-b37f-e76bcb634ce2.png)
+
+### B.
+
+``` 
+# B
+hist(data.normal, breaks = 50, main="5025201134_Rivaldo Panangian Tambunan_F_DNhistogram")
+```
+Berikut adalah histogram dari  generate random nilai sebanyak 100 data, mean = 50, sd = 8 menggunakan distribusi normal
+![Picture22](https://user-images.githubusercontent.com/71111983/162620725-5bdbae24-012d-497e-a75b-879a827365ce.png)
+
+``` 
+# C
+varian.normal = 8*8
+print (varian.normal)
+## Hasil = 
+Varian = 64
+```
+![Picture23](https://user-images.githubusercontent.com/71111983/162620941-85d0ecfe-7c31-418e-8d76-90c7ee37042b.png)
+
+### Referensi
+https://www.statology.org/dgeom-pgeom-qgeom-rgeom-r/ = distribusi geometrik
+https://www.statology.org/dnorm-pnorm-rnorm-qnorm-in-r/ =  distribusi normal
+https://www.statology.org/dpois-ppois-qpois-rpois-r/ =  distribusi poisson
+https://www.statology.org/dbinom-pbinom-qbinom-rbinom-in-r/ =  distribusi binomial
+https://www.statology.org/chi-square-distribution-in-r-dchisq-pchisq-qchisq-rchisq/ = distribusi Chi-Square
+https://www.statology.org/plot-exponential-distribution-in-r/ =  distribusi exponensial
+https://bookdown.org/gabriel_butler/ECON41Labs/tutorial-5-the-poisson-distribution.html#predicting-the-number-of-babies-born-in-a-hospital
+https://rpubs.com/mpfoley73/458721
+
+
+
