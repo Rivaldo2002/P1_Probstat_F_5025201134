@@ -20,6 +20,8 @@ dgeom ( x = 3, prob = .2)
 ```
 ![Picture1](https://user-images.githubusercontent.com/71111983/162616085-7ae3c6f4-3d7f-4fea-bbeb-fb361c6ada4a.png)
 
+Dalam penyelesaiannya kita menggunakan  sintaks dgeom dalam bahasa r untuk mencari kemungkinan mengalami sejumlah kegagalan sebelum mengalami keberhasilan pertama. Oleh karena itu dalam dgeom kita memerlukan (dgeom(x, prob)) x dalam hal ini merujuk pada pertemuan orang yang tidak menghadiri acara vaksinasi  dan prob merujuk pada peluang untuk bertemu orang yang hadir dalam vaksinasi. 
+
 ### B.
 mean Distribusi Geometrik dengan 10000 data random , prob = 0,20 dimana distribusi geometrik acak tersebut X = 3 ( distribusi geometrik acak () == 3 ).
 ``` 
@@ -29,6 +31,8 @@ mean(data == 3)
 ## Hasil = 0.0977
 ```
 ![Picture2](https://user-images.githubusercontent.com/71111983/162616277-78863f5f-5838-42d3-a740-b940b77b1e0a.png)
+
+Dari data 10.000 data tersebut kita dapat mendapatkan mean untuk penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama. Pertama-tama kita harus membuat rgeom dari 10000 data tersebut ke dalam sebuah satu variable lalu mencari mean dari 10000 tersebut yang data nya 3. Kita harus menggunakan sintax (data <- rgeom ( n = 10000, prob = .2)) lalu (mean(data == 3)) untuk mendapatkan meannya.
 
 ### C.
 Bandingkan Hasil poin a dan b , apa kesimpulan yang bisa didapatkan?
@@ -62,6 +66,8 @@ Berikut adalah Histogram untuk 10000 data random , prob = 0,20 dimana distribusi
 
 ![Picture3](https://user-images.githubusercontent.com/71111983/162616409-dcb139c2-57cd-4858-a954-0d4aa8173602.png)
 
+Pada permasalahan ini kita akan membuat sebuah histogram pada distribusi geometrik untuk peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi  sebelum keberhasilan pertama. Dalam pembuatannya kita menggunakan 2 library yaitu dplyr dan ggplot2 untuk membuat sebuah manipulasi data dan untuk membuat histogramnya itu sendiri ( visualisasi dari data2 tersebut). Kita menggunakan data,frame untuk membuat data pada histogram tersebut, lalu mutate untuk membuat informasi mengenai batang histrogramnya, lalu untuk ggplot untuk menentukan variable yang digunakan pada sumbu x , y serta informasi batang histogramnya, geom text digunakan untuk menentukan posisi, besar font, dll untuk tulisan yanag berada diatas batang histogram, dan terakhir labs untuk menulis judul serta keterangan pada sumbu-sumbu histogram.
+
 ### E.
 Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Geometrik.
 ``` 
@@ -87,6 +93,8 @@ dbinom( x = 4, size = 20, prob = .2)
 ```
 ![Picture5](https://user-images.githubusercontent.com/71111983/162616833-cc0b84b9-2d63-438a-8569-a2e6989095fb.png)
 
+Dalam penyelesaian kasus ini kita menggunakan distribusi binomial, dikarenakan kita mencari peluang dari sebuah keberhasilan dalam 4 pasien sembuh yang saling bebas pada 20 pasien yang terkena atau menderita Covid-19. Dimana setiap percobaan memiliki probabilitas 0.2. oleh karena itu kita menggunakan sintax dbinom (x, size, prob) dimana x merupakan banyak pasien yang sembuh, size merupakan banyaknya pasien yang terkena Covid-19, dan prob adalah probabilitas kesembuhan setiap pasien yang terkena.
+
 ``` 
 ### B.
 Gambarkan grafik histogram berdasarkan kasus tersebut.
@@ -111,6 +119,8 @@ data.frame(x = 0:5, prob = dbinom( x = 0:5, size = 20, prob = .2)) %>%
 Berikut adalah histogram untuk Peluang terdapat 4 pasien yang sembuh dari 20 pasien menderita Covid19 dengan peluang sembuh sebesar 0.2
 
 ![Picture6](https://user-images.githubusercontent.com/71111983/162616904-6a0c5052-3aa7-4869-8e99-7e3bd20ba2d2.png)
+
+Pada permasalhan ini kita akan membuat sebuah histogram pada distribusi binomianl untuk peluang kesembuhan pasien sebanyak 4 orang dari 20 pasien yang terkena Covid-19 dengan peluang 0.2. Dalam pembuatannya kita menggunakan 2 library yaitu dplyr dan ggplot2 untuk membuat sebuah manipulasi data dan untuk membuat histogramnya itu sendiri ( visualisasi dari data2 tersebut). Kita menggunakan data,frame untuk membuat data pada histogram tersebut, lalu mutate untuk membuat informasi mengenai batang histrogramnya, lalu untuk ggplot untuk menentukan variable yang digunakan pada sumbu x , y serta informasi batang histogramnya, geom text digunakan untuk menentukan posisi, besar font, dll untuk tulisan yanag berada diatas batang histogram, dan terakhir labs untuk menulis judul serta keterangan pada sumbu-sumbu histogram. Dari histogram tersebut kita mendapatkan peluang pasien yang sembuh sebanyak 4 orang adalah 0.22 dan berwarna merah.
 
 ### C.
 Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Binomial.
@@ -139,6 +149,8 @@ dpois(x = 6, lambda = 4.5)
 ```
 ![Picture8](https://user-images.githubusercontent.com/71111983/162617356-552d7830-746c-4730-9ee1-6128d012d694.png)
 
+Fungsi  dpois  menemukan probabilitas bahwa sejumlah keberhasilan tertentu terjadi berdasarkan tingkat keberhasilan rata-rata. Dalam menyelesaikan masalah ini untuk mendapatkan 6 bayi yang akan lahir dalam rumah sakit tersebut menggunakan sintax (dpois(x =  6, lambda = 4.5). Jumlah keberhasilan yang kami pertimbangkan adalah 6, jadi kami akan menetapkan x = 6. Selain itu, rata-rata historis 4,5 bayi per hari ini adalah nilai kami untuk lambda, jadi kami akan menetapkan lambda = 4.5.
+
 ### B.
 simulasikan dan buatlah histogram kelahiran 6 bayi akan lahir di rumah sakit ini  selama setahun (n = 365)
 ``` 
@@ -165,6 +177,8 @@ data.anak %>% ggplot() +
 ```
 Berikut adalah histogram untuk Peluang kelahiran 6 bayi di rumah sakit selama satu tahun
 ![Picture9](https://user-images.githubusercontent.com/71111983/162617556-e18dbe98-ef0d-4daa-873e-63381d9f6442.png)
+
+Dalam peermasalhan ini kita akan melakukan simulasi dan membuat suatu histogram untuk kelahiran 6 bayi dalam satu tahun, pertama kita akan mencari data acak menggunakan sintax (rpois( n = 365, lambda = 4.5), lalu data yang di dapat dari data acak tersebut kita inisialisasi pada data.kelahiran. Lalu setelah mendapatkan data acak dari tersebut kita menggunakan mean dari 365 data acak yang telah kita dapatkan sebelumnya menggunakan sintax (mean(data.kelahiran == 6)) untuk mencari peluang munculnya kelahiran anak berjumlah 6.Selanjutnya untuk membuat histogram dari data kelahiran anak yang berjumlah 6 dalam data 365 hari. Kita menggunakan library dplyr dan ggplot2 untuk membuat sebuah manipulasi data dan untuk membuat histogramnya itu sendiri ( visualisasi dari data2 tersebut). Kemudian kita menggunakan data.frame untuk masukkan data ke dalam histogramnya, kita menggunakan data dari data.kelahiran yang sudah disimpan sebelumnya. Selanjutnya kita menggunakan geom.histogram untuk menentukan isi dari sumbu x dan y pada histogram serta untuk keterangan pada batang histogram, kemudian scale_x_continuous untuk menentukan batas dari pada histogram tersebut, dan yang terakhir labs untuk membuat nama dari histogram serta sumbu-sumbu pada histogram.
 
 ### C.
 dan bandingkan hasil poin a dan b , Apa kesimpulan yang bisa didapatkan
@@ -193,6 +207,8 @@ dchisq(2, df = 10)
 ```
 ![Picture10](https://user-images.githubusercontent.com/71111983/162617846-4c27c7e7-39a0-44c8-bf00-9ea37da1d38f.png)
 
+Dalam penyelesaian ini kita dapat menggunakan sintax dchisq(2, df = 10), utnuk mendapatkan probabilitas dari distribusi chi-square.
+
 ### B.
 Histogram dari Distribusi Chi-Square dengan 100 data random.
 ``` 
@@ -202,6 +218,8 @@ hist(rchisq (100, 10))
 Berikut adalah Histogram dari Distribusi Chi-Square dengan 100 data random.
 
 ![Picture19](https://user-images.githubusercontent.com/71111983/162619760-95139d20-59fe-4026-96f5-e8a53d87d527.png)
+
+Dalam pembuatan histogram kita akan menggunakan rchisq untuk mendapatkan data acak sebanyak 100 data acak. Selanjutnya kita akan membuat histogramnya melalui hist (rchisq 100, 10).
 
 ### C.
 Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Chi-Square.
@@ -217,6 +235,8 @@ Varian = 20
 ```
 ![Picture12](https://user-images.githubusercontent.com/71111983/162618404-be70c617-69a1-4172-a5ca-437f4f684f1d.png)
 
+Dalam distribusi Chi-Square rataan sama dengan v yang diberitahu oleh soal. Dan untuk varian adalah 2 kali v yang diberitahu oleh soal. Sehingga dalam kasus ini rataan = 10 dan varian = 2 * 10.
+
 ## **Soal 5**
 Diketahui bilangan acak (random variable) berdistribusi exponential (λ = 3). Tentukan
 ### A.
@@ -227,6 +247,9 @@ dexp(3)
 ## Hasil = 0.04978707
 ```
 ![Picture13](https://user-images.githubusercontent.com/71111983/162618472-d149ffc0-5ac8-47c6-b126-59dde85e4ded.png)
+
+Dalam permasalahan kita akan menggunakan sintax (dexp(3)) untuk mendapatkan probabilitas dari distribusi binomial yang memiliki λ = 3.
+
 ### B.
 Histogram dari Distribusi Exponensial untuk 10, 100, 1000 dan 10000 bilangan random
 ``` 
@@ -252,6 +275,9 @@ hist(rexp(10000))
 ![Picture16](https://user-images.githubusercontent.com/71111983/162618925-a656001a-b930-4086-a31e-3e6c49f7c9f2.png)
 ![Picture17](https://user-images.githubusercontent.com/71111983/162618927-239c7075-fc7c-4dc2-9b8f-3983dd00ae30.png)
 
+
+Kita menggunakan recp(n , 3) untuk mendapatkan data acak yang akan dimasukkan ke dalam histogram. Lalu kita menggunakan get seet agar bilangan acak yang diperoleh akan sama persis pada setiap pembangkitan. Lalu kita menggunakan hist(rexp(n)) untuk membentuk histogram sesuai dengan n (data acak yang diminta oleh soal).
+
 ### C.
 Nilai Rataan (μ) dan Varian (σ²) dari Distribusi Exponensial untuk n = 100 dan λ = 3 Petunjuk: Gunakan set.seed(1) ,Gunakan fungsi bawaan R
 ``` 
@@ -265,6 +291,8 @@ Rataan = 3
 Varian = 9
 ```
 ![Picture18](https://user-images.githubusercontent.com/71111983/162619286-edfca90f-a156-4c41-a46b-bbbbdd4369e4.png)
+
+Dalam distribusi exponensial untuk mendapatkan rataan itu sama dengan lambda dari yang sudah diberikan oleh soal dan untuk varian nya itu sendiri didapat dari lambda * lambda (dari yang sudah ditentukan oleh soal 
 
 ## **Soal 6**
 Diketahui generate random nilai sebanyak 100 data, mean = 50, sd = 8. Tentukan
@@ -289,6 +317,8 @@ Berikut adalah data acak dari sebuah distribusi normal dan juga plot dari data a
 
 ![Picture21](https://user-images.githubusercontent.com/71111983/162620413-97e0e6a1-81e7-408d-b37f-e76bcb634ce2.png)
 
+Untuk mengerjakan soal ini kita akan menggunakan sintax rnorm(100, mean = 50, sd = 8) untuk mendapatkan data random sebanyak 100 dari distribusi normal tersebut. Lalu akan dibuat sebuah plot pada data generate yang dibuat dari data acak yang didapat Dari data acak sebelumnya. Untuk membuat plot kita harus menginisialisasi menjadi kedalam data.normal , kemudian kita menggunakan sintax plot(data.normal)
+
 ### B.
 
 ``` 
@@ -296,7 +326,10 @@ Berikut adalah data acak dari sebuah distribusi normal dan juga plot dari data a
 hist(data.normal, breaks = 50, main="5025201134_Rivaldo Panangian Tambunan_F_DNhistogram")
 ```
 Berikut adalah histogram dari  generate random nilai sebanyak 100 data, mean = 50, sd = 8 menggunakan distribusi normal
+
 ![Picture22](https://user-images.githubusercontent.com/71111983/162620725-5bdbae24-012d-497e-a75b-879a827365ce.png)
+
+Selanjutnya untuk membuat histogram dari data acak sebelumnya kita akan menggunakan hist(data.normal, breaks = 50, main="5025201134_Rivaldo Panangian Tambunan_F_DNhistogram") dari siru kita akan mendapatkan histogram yang sesuai dengan data acak sebelumnya
 
 ``` 
 # C
@@ -306,6 +339,8 @@ print (varian.normal)
 Varian = 64
 ```
 ![Picture23](https://user-images.githubusercontent.com/71111983/162620941-85d0ecfe-7c31-418e-8d76-90c7ee37042b.png)
+
+Untuk mendapatkan varian dari distribusi normal rumusnya adalah sd (yang diberikan oleh soal yaitu sebanyak 8) dikali dengan sd itu sendiri
 
 ### Referensi
 https://www.statology.org/dgeom-pgeom-qgeom-rgeom-r/ = distribusi geometrik
