@@ -13,3 +13,8 @@ Seorang penyurvei secara acak memilih orang-orang di jalan sampai dia bertemu de
 ### A.
 Berapa peluang penyurvei bertemu x = 3 orang yang tidak menghadiri acara vaksinasi sebelum keberhasilan pertama ketika p = 0,20 dari populasi menghadiri acara vaksinasi ? (distribusi Geometrik).
 
+``` 
+# A
+dgeom ( x = 3, prob = .2)
+## Hasil = 0.1024
+```
